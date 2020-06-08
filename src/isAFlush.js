@@ -11,7 +11,34 @@
  */
 
 function isAFlush(cards) {
-  // CODE HERE
+  //initialisation des couleurs
+  var s = 0;
+  var c = 0;
+  var h = 0;
+  var d = 0;
+
+  //boucle
+
+  cards.forEach(function(arrayItem,arrayIndex,array){
+    if(array[arrayIndex].match('s')){
+     s++;
+    }
+    else if(array[arrayIndex].match('c')){
+      c++;
+    }
+    else if(array[arrayIndex].match('h')){
+      h++;
+    }
+    else{
+      d++;
+    }
+  })
+  if ((s >=  5) || (c >= 5) || (h >= 5) || (d >= 5)){
+    return true;
+  }
+  else{
+    return false;
+  }
 }
 
 export { isAFlush };

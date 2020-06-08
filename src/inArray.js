@@ -6,7 +6,13 @@
  * ary = ["2d", "5s", "Ah"] val = "2h" alors inArray(ary, val) retournera false
  */
 function inArray(ary, val) {
-  // CODE HERE
+  if (ary.indexOf(val) != -1){
+    return true;
+  }
+  else {
+    return false;
+  }
+  
 }
 
 export { inArray };

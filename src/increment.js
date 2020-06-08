@@ -9,7 +9,12 @@
  */
 
 function increment(number) {
-  // CODE HERE
+  if (Number.isInteger(number) === false){
+    return number + " doit être un nombre !";
+  }
+  else{
+    return number + 1;
+  }
 }
 
 export { increment };

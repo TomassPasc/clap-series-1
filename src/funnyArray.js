@@ -19,8 +19,8 @@ function funnyArray(ary) {
     return ary[pos - 1] + ary[pos];
   }
   else {
-    const pos = (ary.length + 1) / 2;
-    return ary[pos - 1];
+    const pos = (ary.length - 1) / 2; 
+    return ary[pos];
   }
   
 }

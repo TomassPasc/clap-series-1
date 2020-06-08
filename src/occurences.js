@@ -28,7 +28,24 @@ const CARDS = {
 }
 
 function occurences(cards) {
-  // CODE HERE
+
+  const cardsValue = [];
+  for (var i = 0; i <cards.length; i++){
+    cardsValue.push(cards[i].slice(0, -1));
+  }
+  for (const val in CARDS) {
+    for (var i = 0; i<cardsValue.length; i++){
+      if(CARDS[val] === cardsValue[i]){
+      
+      //result.val = CARDS[val];
+      Object.assign(result, {val: CARDS[val]});
+      console.log(result)
+      	//console.log(`${val}: ${CARDS[val]}`);
+       // result.CARDS = CARDS[val];
+      }
+    }
+  }
+
 }
 
 export { occurences };

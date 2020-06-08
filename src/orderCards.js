@@ -21,6 +21,8 @@ function orderCards(cards) {
       decks.push(value + color);
        })
      })
+
+     //ajout des cartes par ordre croissant
      for (var i = 0; i<decks.length; i++){
        for (var j = 0; j<cards.length; j++){
          if (decks[i] === cards[j]){

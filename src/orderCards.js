@@ -10,7 +10,25 @@
  * On considère que la valeur de la carte prime sur le type de la carte
  */
 function orderCards(cards) {
-  // CODE HERE
+  const cardValue = ["A", "K", "Q", "J", 10, 9, 8, 7, 6, 5, 4, 3, 2];
+  const cardColor = ["s", "h", "c", "d"];
+  const decks = [];
+  const result = [];
+
+    //création du decks du plus fort au moins fort
+    cardValue.forEach(function(value){
+      cardColor.forEach(function(color){
+      decks.push(value + color);
+       })
+     })
+     for (var i = 0; i<decks.length; i++){
+       for (var j = 0; j<cards.length; j++){
+         if (decks[i] === cards[j]){
+           result.push(decks[i]);
+         }
+       }
+     }
+     return result;
 }
 
 export { orderCards };

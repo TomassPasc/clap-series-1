@@ -8,7 +8,8 @@
  */
 
 function discount(price, percent) {
-  // CODE HERE
+  var dicountPrice = price - (price * percent * 0.01);
+  return dicountPrice + " €";
 }
 
 export { discount };

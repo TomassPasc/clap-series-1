@@ -11,7 +11,18 @@
  * - Si le tableau est vide, je retourne le mot 'rien'
  */
 function funnyArray(ary) {
-  // CODE HERE
+  if (ary.length === 0){
+    return "rien";
+  }
+  else if ((ary.length % 2) === 0){
+    const pos = ary.length / 2; //renvoie la position droite que l'on souhaite obtenir pour additionner
+    return ary[pos - 1] + ary[pos];
+  }
+  else {
+    const pos = (ary.length + 1) / 2;
+    return ary[pos - 1];
+  }
+  
 }
 
 export { funnyArray };

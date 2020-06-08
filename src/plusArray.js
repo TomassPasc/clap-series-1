@@ -6,7 +6,12 @@
  * alors plusArray(arr1, arr2) retournera 30 
  */
 function plusArray(arr1, arr2) {
-  // CODE HERE
+  const reducer = (accumulator, currentValue) => accumulator + currentValue;
+  var res1= arr1.reduce(reducer);
+  var res2= arr2.reduce(reducer);
+  return res1 + res2;
+  //gérer l'empty 
+
 }
 
 export { plusArray };

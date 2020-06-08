@@ -2,7 +2,7 @@
   "spec_dir": "spec",
   "spec_files": [
 
-    "**/isAFlushSpec.js"
+    "**/isAPairSpec.js"
   ],
   "helpers": [
     "helpers/**/*.js"

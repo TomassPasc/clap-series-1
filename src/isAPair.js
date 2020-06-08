@@ -11,7 +11,16 @@
  */
 
 function isAPair(cards) {
-  // CODE HERE
+  const cardsValue = [];
+  for (var i = 0; i <cards.length; i++){
+    cardsValue.push(cards[i].slice(0, -1));
+  }
+  for (var i = 0; i <cardsValue.length; i++){
+    if(cardsValue.lastIndexOf(cardsValue[i]) != cardsValue.indexOf(cardsValue[i])){
+      return true;
+    }
+  } 
+  return false;  
 }
 
 export { isAPair };

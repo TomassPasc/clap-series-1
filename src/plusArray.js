@@ -7,10 +7,17 @@
  */
 function plusArray(arr1, arr2) {
   const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+  if (arr1.length === 0){
+  	return arr2.reduce(reducer);
+  } 
+  else if(arr2.length === 0){
+  	return arr1.reduce(reducer);
+  } else {
   var res1= arr1.reduce(reducer);
   var res2= arr2.reduce(reducer);
   return res1 + res2;
-  //gérer l'empty 
+  }
 
 }
 
